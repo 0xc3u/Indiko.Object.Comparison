@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indiko.Object.Comparison", "Indiko.Object.Comparison\Indiko.Object.Comparison.csproj", "{478C4093-E302-45FC-928D-C7E8CFB47644}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indiko.Object.Comparison.Tests", "Indiko.Object.Comparison.Tests\Indiko.Object.Comparison.Tests.csproj", "{2EBA23B6-0EEF-41FC-AC24-98E8B1FC16DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C440BA2-0D27-4655-B8DD-23C616BF70B2}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{478C4093-E302-45FC-928D-C7E8CFB47644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478C4093-E302-45FC-928D-C7E8CFB47644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478C4093-E302-45FC-928D-C7E8CFB47644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478C4093-E302-45FC-928D-C7E8CFB47644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EBA23B6-0EEF-41FC-AC24-98E8B1FC16DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBA23B6-0EEF-41FC-AC24-98E8B1FC16DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EBA23B6-0EEF-41FC-AC24-98E8B1FC16DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EBA23B6-0EEF-41FC-AC24-98E8B1FC16DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C1A5250-4B63-4ABE-9E4A-65064808F863}
+	EndGlobalSection
+EndGlobal

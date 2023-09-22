@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+	
+		<!-- NuGet -->
+	<Authors>INDIKO</Authors>
+	<Copyright>Copyright © INDIKO and contributors</Copyright>
+	<IsPackable>True</IsPackable>
+	<PackageProjectUrl>https://github.com/0xc3u/Indiko.Object.Comparison</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/0xc3u/Indiko.Object.Comparison</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>dotnet;object;compare;object-comparison</PackageTags>
+	<IncludeSymbols>True</IncludeSymbols>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<Title>INDIKO Object Comparison</Title>
+	<Description>Indiko.Object.Comparison is a library to compare objects to eachother and creates a report of differences between them.</Description>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	<DebugType>portable</DebugType>
+	
+  </PropertyGroup>
+
+
+	
+</Project>
