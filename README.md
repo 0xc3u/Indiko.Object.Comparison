@@ -1,5 +1,18 @@
 # Indiko.Object.Comparison
 
+
+## Build Status
+![ci](https://github.com/0xc3u/Indiko.Object.Comparison/actions/workflows/ci.yml/badge.svg)
+
+
+## Install the library
+
+[![NuGet](https://img.shields.io/nuget/v/Indiko.Object.Comparison.svg?label=NuGet)](https://www.nuget.org/packages/Indiko.Object.Comparison/)
+
+Available on [NuGet](http://www.nuget.org/packages/Indiko.Object.Comparison).
+
+Install with the dotnet CLI: `dotnet add package Indiko.Object.Comparison`, or through the NuGet Package Manager in Visual Studio.
+
 ## Overview
 
 This library is designed for comparing two objects of the same or different types. The main functionality is encapsulated in the following four classes:
