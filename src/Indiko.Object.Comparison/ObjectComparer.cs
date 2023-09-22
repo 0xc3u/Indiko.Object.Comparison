@@ -2,20 +2,43 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace Indiko.Object.Comparison;
 
 public static class ObjectComparer
 {
-    public static ComparisonReport Compare<TType>(TType source, TType destination, List<string> ignoreProperties = null)
-    {
-        return Compare(source, destination, ignoreProperties);
-    }
-
+    /// <summary>
+    /// Compares two objects and their properties to generate a comparison report.
+    /// </summary>
+    /// <param name="source">The source object for comparison.</param>
+    /// <param name="destination">The destination object for comparison.</param>
+    /// <param name="ignoreProperties">A list of property names to ignore during the comparison. Defaults to null.</param>
+    /// <returns>A <see cref="ComparisonReport"/> that contains information about the equality and differences between the two objects.</returns>
+    /// <exception cref="System.Reflection.TargetException">Thrown if the property is non-static and the object is null.</exception>
+    /// <exception cref="System.MethodAccessException">Thrown for protected methods on trusted objects in security critical contexts.</exception>
+    /// <exception cref="System.Reflection.TargetInvocationException">Thrown if the initial set method on a property throws an exception.</exception>
+    /// <example>
+    /// <code>
+    /// var obj1 = new { Name = "John", Age = 30 };
+    /// var obj2 = new { Name = "Doe", Age = 30 };
+    /// var ignoredProps = new List&lt;string&gt;() { "Age" };
+    /// var report = ObjectComparer.Compare(obj1, obj2, ignoredProps);
+    /// </code>
+    /// </example>
+    /// <remarks>
+    /// The method compares each property of the source object with the corresponding property of the destination object.
+    /// Properties specified in the <paramref name="ignoreProperties"/> list are excluded from the comparison.
+    /// The method also handles nullable types and checks for missing properties in either object.
+    /// </remarks>
     public static ComparisonReport Compare(object source, object destination, List<string> ignoreProperties = null)
     {
         var report = new ComparisonReport { AreEqual = true };
+
+        if (source == null && destination == null)
+        {
+            report.AreEqual = true;
+            return report;
+        }
 
         if (source == null || destination == null)
         {
