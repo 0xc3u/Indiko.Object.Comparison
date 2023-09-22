@@ -14,6 +14,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: dotnet build src\Indiko.Object.Comparison.sln -c Release
+      - uses: actions/checkout@v3
+      - name: Build
+        run: dotnet build src\Indiko.Object.Comparison.sln -c Release
+      - name: Test
+      - uses: actions/checkout@v3
+      - run: dotnet test
