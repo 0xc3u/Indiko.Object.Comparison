@@ -1,5 +1,4 @@
 using FluentAssertions;
-using Indiko.Object.Comparison.Extensions;
 
 namespace Indiko.Object.Comparison.Tests;
 
@@ -336,6 +335,31 @@ public class ObjectComparerTests
 
         // Make sure "Country" and "Email" are not causing issues.
         result.Differences.Should().NotContain(d => d.PropertyName == "Country" || d.PropertyName == "Email");
+    }
+
+    [Fact]
+    public void CompareLists_ShouldHaveCorrectNumberOfDifferences()
+    {
+        // Arrange
+        var list1 = new List<object>
+    {
+        new { Name = "John", Age = 25 },
+        new { Name = "Alice", Age = 30 }
+    };
+        var list2 = new List<object>
+    {
+        new { Name = "Jane", Age = 25 },
+        new { Name = "Alice", Age = 35 }
+    };
+
+        // Act
+        var report = ObjectComparer.CompareLists(list1, list2);
+
+        // Assert
+        report.AreEqual.Should().BeFalse();
+        report.Differences.Count.Should().Be(2); // Differences: 'Item[0].Name' and 'Item[1].Age'
+        report.Differences.Should().Contain(d => d.PropertyName == "Item[0].Name");
+        report.Differences.Should().Contain(d => d.PropertyName == "Item[1].Age");
     }
 
 
